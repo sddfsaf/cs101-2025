@@ -22,14 +22,17 @@ int main()
    for( int i =0;i <3; i++){
        printf("%d ", ar[i]);
    }
+   printf("\n");
    fread(br, sizeof(b), 1, fp);
    for( int i =0;i <3; i++){
        printf("%c ", br[i]);
    }
+   printf("\n");
    fread(cr, sizeof(c), 1, fp);
    for( int i =0;i <3; i++){
        printf("%f ", cr[i]);
    }
+   printf("\n");
    fclose(fp);
 
     return 0;
