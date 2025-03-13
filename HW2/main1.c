@@ -11,10 +11,9 @@ int main()
     int cout[n]; 
     FILE* fp;
     fp = fopen("lotto.txt", "w");
-    time_t curtime;
-    time(&curtime);
-    srand(2025);
-    fprintf(fp, "%s", ctime(&curtime));
+    
+    fprintf(fp, "========= lotto649 =========\n");
+    srand(1);
     for (int i =1; i <=l; i++){
         for ( int k =0;k <n; k++){
             
@@ -29,11 +28,22 @@ int main()
         }
         fprintf(fp, "[%d]: ", i);
         for(int a =0; a <n; a++){
-            fprintf(fp, "%d ", cout[a]);
+            fprintf(fp, "%02d ", cout[a]);
         }
         fprintf(fp, "\n");
     }
+    if ( l < 5){
+        for (int i = l+1; i <=5; i++){
+            fprintf(fp, "[%d]:", i);
+            for (int i =0; i <n; i++){
+                fprintf(fp, " __");
+            }
+            fprintf(fp, "\n");
+        }
+    }
+    fprintf(fp, "========= csie@CGU =========\n");
 
     fclose (fp);
     return 0;
 }
+
