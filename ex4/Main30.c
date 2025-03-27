@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 
-char* get_int_array(int n){
+char* get_str_array(int n){
     return (char *) malloc (n* sizeof (char));
 }
 
 int main()
 {
     int size = 8;
-    char* ptr = get_int_array(size);
+    char* ptr = get_str_array(size);
     
     strcpy(ptr, "IU12345");
     printf("%s\n",ptr);
