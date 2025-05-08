@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 
 using namespace std;
@@ -45,9 +43,6 @@ class BMW_Car : public Car{
         cout << "Constructing BMW_Car\n";
         m_DriveMode = "Reer-Wheel";
     }
-    string get_DriveMode() {
-        return m_DriveMode;
-    }
 };
 
 class AUDI_Car : public Car{
@@ -57,9 +52,6 @@ class AUDI_Car : public Car{
         cout << "Constructing ADUI_Car\n";
         m_DriveMode = "Front-Wheel";
     }
-    string get_DriveMode() {
-        return m_DriveMode;
-    }
 };
 
 class BENZ_Car : public Car{
@@ -68,9 +60,6 @@ class BENZ_Car : public Car{
     BENZ_Car(string y, int z, int s) : Car("BENZ", y, z, s) {
         cout << "Constructing BENZ_Car\n";
         m_DriveMode = "Front-Wheel";
-    }
-    string get_DriveMode() {
-        return m_DriveMode;
     }
 };
 
